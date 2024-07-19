@@ -107,3 +107,33 @@ The `issubset()` method determines whether all elements of a set are contained w
 
 30. **apply(lambda x: x.capitalize())**:
 A `lambda` function is an anonymous, inline function defined with the `lambda` keyword. The `apply()` method uses the lambda function to capitalize each element in the column. For example, `apply(lambda x: x.capitalize())` capitalizes the first letter of each element in the column.
+
+31. **pd.to_datetime**:
+The `pd.to_datetime` function converts argument to datetime. It can handle different formats of date strings and convert them into datetime objects.
+
+32. **apply(len)**:
+The `apply(len)` method applies the `len` function to each element in the Series or each row/column in the DataFrame, returning the length of each element.
+
+33. **pd.DataFrame({'getNthHighestSalary({})'.format(N): [nth_highest_salary]})**:
+This line creates a new DataFrame with a single column named 'getNthHighestSalary(N)' where N is a variable, and the column contains the value of `nth_highest_salary`.
+
+34. **patients[patients['conditions'].apply(lambda x: any(cond.startswith('DIAB1') for cond in x.split()))]**:
+This line filters the DataFrame to include only rows where the 'conditions' column contains at least one condition that starts with 'DIAB1'.
+
+35. **scores_sorted = scores.sort_values(by='score', ascending=False)**:
+The `sort_values()` method sorts the DataFrame by the 'score' column in descending order. Using `method='dense'` with `rank()` assigns ranks to scores, ensuring that duplicate scores receive the same rank.
+
+36. **pd.melt()**:
+The `pd.melt()` function unpivots a DataFrame from wide format to long format, making columns into rows. It is useful for transforming data for analysis.
+
+37. **.dropna()**:
+The `dropna()` method removes missing values (NaNs) from a DataFrame. You can specify which axis and how to handle the missing values.
+
+38. **pd.notna()**:
+The `pd.notna()` function checks for non-missing values in a DataFrame or Series, returning a boolean mask indicating where values are not NaN.
+
+39. **.unique()**:
+The `unique()` method returns an array of unique values in a Series or DataFrame column, eliminating duplicate values.
+
+40. **if len(sorted_df) < 2: return pd.DataFrame({'SecondHighestSalary': [None]})**:
+This condition checks if the sorted DataFrame has fewer than two rows. If true, it returns a DataFrame with a single entry of `None` under the column 'SecondHighestSalary'.   
